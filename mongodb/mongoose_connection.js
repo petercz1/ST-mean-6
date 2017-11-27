@@ -10,12 +10,13 @@ var contact= {
 }
 var contact_schema = new mongoose.Schema(contact);
 
-var user = {
+var employee = {
     name: String,
     gender: String,
     contact: contact
 }
+var employee_schema = new mongoose.Schema(employee);
 
-var user_schema = new mongoose.Schema(user);
+var USERCLASS = mongoose.model('employees', employee_schema);
 
-var USERCLASS = mongoose.model('')
+module.exports = USERCLASS;
