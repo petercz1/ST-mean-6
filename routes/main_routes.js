@@ -1,4 +1,5 @@
 var router = require('express').Router();
+var USERCLA
 module.exports = router;
 
 router.get('/', do_homepage);
@@ -17,6 +18,7 @@ router.delete('/api/v6/delete/:_id', do_delete);
 
 function do_read(req, res) {
     console.log('getting all data');
+
 
 }
 

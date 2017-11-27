@@ -17,6 +17,6 @@ var employee = {
 }
 var employee_schema = new mongoose.Schema(employee);
 
-var USERCLASS = mongoose.model('employees', employee_schema);
+var EMPLOYEECLASS = mongoose.model('employees', employee_schema);
 
 module.exports = USERCLASS;
