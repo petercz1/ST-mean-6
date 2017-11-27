@@ -25,20 +25,25 @@ function do_read(req, res) {
 function do_create(req, res) {
   console.log('creating user');
   console.log(req.body);
+
   var data = {
-      name: req.body.name,
-      gender: req.body.gender,
-      contact:{
-          email: req.body.email,
-          cell: req.body.cell,
-          home: req.body.home
-      }
+    name: req.body.name,
+    gender: req.body.gender,
+    contact: {
+      email: req.body.email,
+      cell: req.body.cell,
+      home: req.body.home
+    }
   }
 
+  var employee = new EMPLOYEECLASS(data);
+  employee.save()
+    .then();
 }
 
 function do_update(req, res) {
   console.log('updating user');
+  
 
 }
 
