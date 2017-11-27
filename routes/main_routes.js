@@ -41,7 +41,10 @@ function do_create(req, res) {
 
   var employee = new EMPLOYEECLASS(data);
   employee.save()
-    .then();
+    .then(function (result) {
+        console.log(result);
+        res.json({message: 'saved new employee!'})
+    });
 }
 
 function do_update(req, res) {
