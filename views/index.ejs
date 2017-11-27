@@ -3,7 +3,7 @@
 
 <head>
     <title>Demo</title>
-<link rel="icon" href="https://undertale.aminoapps.com/static/bower/emojify.js/images/emoji/fish.png">
+    <link rel="icon" href="https://undertale.aminoapps.com/static/bower/emojify.js/images/emoji/fish.png">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -11,18 +11,21 @@
     <script src="js/frontend_app.js"></script>
 
 </head>
+
 <body>
     <h1>Demo</h1>
 
-    <table class="table">
+    <table class="table" ng-controller="all_employees">
         <thead>
             <tr>
                 <th>_id</th>
                 <th>employee</th>
             </tr>
         </thead>
-        <tbody>
-
+        <tbody ng-repeat="employee in employees">
+            <tr>
+                <td></td>
+            </tr>
         </tbody>
     </table>
 
