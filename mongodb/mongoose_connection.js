@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
-var url = 'mongodb://localhost/people';
+var url = 'mongodb://localhost:27500/people';
 mongoose.connect(url,{useMongoClient: true});
 
 var contact= {
@@ -13,7 +13,7 @@ var contact_schema = new mongoose.Schema(contact);
 var employee = {
     name: String,
     gender: String,
-    contact: contact_schema
+    contact: contact
 }
 var employee_schema = new mongoose.Schema(employee);
 
