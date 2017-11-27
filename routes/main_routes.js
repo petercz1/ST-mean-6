@@ -28,7 +28,11 @@ function do_create(req, res) {
   var data = {
       name: req.body.name,
       gender: req.body.gender,
-      contact:
+      contact:{
+          email: req.body.email,
+          cell: req.body.cell,
+          home: req.body.home
+      }
   }
 
 }
