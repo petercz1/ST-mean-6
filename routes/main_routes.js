@@ -45,9 +45,16 @@ function do_update(req, res) {
   console.log('updating user');
   var update = {
       $set:{
-          
+        name: req.body.name,
+        gender: req.body.gender,
+        contact: {
+          email: req.body.email,
+          cell: req.body.cell,
+          home: req.body.home
+        }
       }
   }
+  EMPLOYEECLASS.findByIdAndUpdate(req.body.)
 
 }
 
