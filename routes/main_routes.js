@@ -43,6 +43,7 @@ function do_create(req, res) {
 
 function do_update(req, res) {
   console.log('updating user');
+  console.log(req.body);
   var update = {
     $set: {
       name: req.body.name,
@@ -60,6 +61,7 @@ function do_update(req, res) {
 
 function do_delete(req, res) {
   console.log('deleting user');
-  
-  EMPLOYEECLASS.findByIdAndRemove(req.params._id).then();
+  console.log(req.params._id);
+  EMPLOYEECLASS.findByIdAndRemove(req.params._id)
+    .then();
 }
