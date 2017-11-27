@@ -44,21 +44,22 @@ function do_create(req, res) {
 function do_update(req, res) {
   console.log('updating user');
   var update = {
-      $set:{
-        name: req.body.name,
-        gender: req.body.gender,
-        contact: {
-          email: req.body.email,
-          cell: req.body.cell,
-          home: req.body.home
-        }
+    $set: {
+      name: req.body.name,
+      gender: req.body.gender,
+      contact: {
+        email: req.body.email,
+        cell: req.body.cell,
+        home: req.body.home
       }
+    }
   }
-  EMPLOYEECLASS.findByIdAndUpdate(req.body.)
-
+  EMPLOYEECLASS.findByIdAndUpdate(req.body._id, update)
+    .then()
 }
 
 function do_delete(req, res) {
   console.log('deleting user');
-
+  
+  EMPLOYEECLASS.findByIdAndRemove(req.params._id).then();
 }
