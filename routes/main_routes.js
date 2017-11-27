@@ -16,5 +16,21 @@ router.put('/api/v6/update', do_update);
 router.delete('/api/v6/delete/:_id', do_delete);
 
 function do_read(req, res) {
-    console.log('');
+    console.log('getting all data');
+
+}
+
+function do_create(req, res) {
+    console.log('creating user');
+    
+}
+
+function do_update(req, res) {
+    console.log('updating user');
+    
+}
+
+function do_delete(req, res) {
+    console.log('deleting user');
+    
 }
