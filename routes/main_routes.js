@@ -62,12 +62,18 @@ function do_update(req, res) {
     }
   }
   EMPLOYEECLASS.findByIdAndUpdate(req.body._id, update)
-    .then()
+    .then(function (result) {
+        console.log(result);
+        res.json({message: 'updated employee!'})
+    })
 }
 
 function do_delete(req, res) {
   console.log('deleting user');
   console.log(req.params._id);
   EMPLOYEECLASS.findByIdAndRemove(req.params._id)
-    .then();
+    .then(function (result) {
+        console.log(result);
+        res.json({message: 'deleted employee!'})
+    });
 }
