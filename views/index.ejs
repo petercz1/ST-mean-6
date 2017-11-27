@@ -23,7 +23,9 @@
         </thead>
         <tbody ng-repeat="employee in employees">
             <tr>
-                <td>{{employee.name}}</td>
+                <td>
+                    <a href="{{employee.name}}"> {{employee.name}}</a>
+                </td>
             </tr>
         </tbody>
     </table>
