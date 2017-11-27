@@ -9,8 +9,9 @@ function do_all_employees($scope, $http) {
     console.log('reading all records');
     $http.get('/api/v6/read')
       .then(function (results) {
-          console.log(results);
+        console.log(results);
+        $scope.employees = results.data;
       });
   }
-
+  $scope.read();
 }
