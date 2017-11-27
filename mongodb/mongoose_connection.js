@@ -16,3 +16,6 @@ var user = {
     contact: contact
 }
 
+var user_schema = new mongoose.Schema(user);
+
+var USERCLASS = mongoose.model('')
