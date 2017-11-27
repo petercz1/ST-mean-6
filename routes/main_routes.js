@@ -11,7 +11,10 @@ function do_homepage(req, res) {
 // api here
 
 router.get('/api/v6/read', do_read);
-router.post('/api/v6/read', do_read);
-router.get('/api/v6/read', do_read);
-router.get('/api/v6/read', do_read);
+router.post('/api/v6/create', do_create);
+router.put('/api/v6/update', do_update);
+router.delete('/api/v6/delete/:_id', do_delete);
 
+function do_read(req, res) {
+    console.log('');
+}
