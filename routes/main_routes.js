@@ -19,7 +19,10 @@ router.delete('/api/v6/delete/:_id', do_delete);
 function do_read(req, res) {
   console.log('getting all data');
   EMPLOYEECLASS.find()
-    .then();
+    .then(function (results) {
+        //console.log(results);
+        res.json(results);
+    });
 }
 
 function do_create(req, res) {
