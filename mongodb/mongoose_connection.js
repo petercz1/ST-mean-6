@@ -13,7 +13,7 @@ var contact_schema = new mongoose.Schema(contact);
 var employee = {
     name: String,
     gender: String,
-    contact: contact_schema
+    contact: contact
 }
 var employee_schema = new mongoose.Schema(employee);
 
