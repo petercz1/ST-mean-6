@@ -18,13 +18,12 @@
     <table class="table" ng-controller="all_employees">
         <thead>
             <tr>
-                <th>_id</th>
                 <th>employee</th>
             </tr>
         </thead>
         <tbody ng-repeat="employee in employees">
             <tr>
-                <td></td>
+                <td>{{employee.name}}</td>
             </tr>
         </tbody>
     </table>
