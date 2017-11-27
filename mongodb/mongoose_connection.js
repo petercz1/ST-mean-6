@@ -10,3 +10,9 @@ var contact= {
 }
 var contact_schema = new mongoose.Schema(contact);
 
+var user = {
+    name: String,
+    gender: String,
+    contact: contact
+}
+
