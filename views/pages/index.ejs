@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular-route.js"></script>
+    
     <script src="js/frontend_app.js"></script>
 
 </head>
@@ -15,20 +17,7 @@
 <body>
     <h1>Demo</h1>
 
-    <table class="table" ng-controller="all_employees">
-        <thead>
-            <tr>
-                <th>employee</th>
-            </tr>
-        </thead>
-        <tbody ng-repeat="employee in employees">
-            <tr>
-                <td>
-                    <a href="{{employee.name}}"> {{employee.name}} </a>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div ng-view></div>    
 
 </body>
 

@@ -6,23 +6,33 @@ router.get('/', do_homepage);
 
 function do_homepage(req, res) {
   console.log('doing homepage');
-  res.render('index');
+  res.render('pages/index');
 }
 
 // api here
 
 router.get('/api/v6/read', do_read);
+router.get('/api/v6/read/:_id', do_read_single);
 router.post('/api/v6/create', do_create);
 router.put('/api/v6/update', do_update);
 router.delete('/api/v6/delete/:_id', do_delete);
 
 function do_read(req, res) {
   console.log('getting all data');
-  EMPLOYEECLASS.find()
+  EMPLOYEECLASS.find({}, {name: 1})
     .then(function (results) {
         //console.log(results);
         res.json(results);
     });
+}
+
+function do_read_single(req, res) {
+  console.log('getting single employee');
+  EMPLOYEECLASS.findById(req.params._id).then(
+    function (result) {
+      res.json(result);
+    }
+  )
 }
 
 function do_create(req, res) {

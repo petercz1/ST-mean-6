@@ -1,0 +1,14 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>employee</th>
+        </tr>
+    </thead>
+    <tbody ng-repeat="employee in employees">
+        <tr>
+            <td>
+                <a href="employee/{{employee._id}}">{{employee.name}}</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
